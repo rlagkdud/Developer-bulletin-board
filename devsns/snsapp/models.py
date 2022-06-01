@@ -31,6 +31,7 @@ class FreeComment(models.Model):
     comment = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     post = models.ForeignKey(FreePost, null=True, blank=True, on_delete=models.CASCADE)
+    author = models.ForeignKey(User,on_delete=models.CASCADE,null=True)
 
     def __str__(self):
         return self.comment
