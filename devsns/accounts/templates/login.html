@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} {% load socialaccount %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -68,12 +68,20 @@
                         <div class="custom-control custom-checkbox small"></div>
                       </div>
                       <br /><br /><br />
+
                       <input
                         type="submit"
                         value="login!"
                         class="btn btn-success btn-user btn-block"
                       />
                       <hr />
+                      <a
+                        class="btn btn-google btn-user btn-block"
+                        href="{%provider_login_url 'google'%}"
+                      >
+                        <i class="fab fa-google fa-fw"></i>구글계정으로
+                        로그인!</a
+                      >
                     </form>
                     <div class="text-center">
                       <a class="small" href="{%url 'signup'%}"
